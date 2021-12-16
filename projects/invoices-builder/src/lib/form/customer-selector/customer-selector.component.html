@@ -1,3 +1,20 @@
-<div class="customer-selector">
-  <span>+</span>
+<!-- <ng-template [ngIf]="!selectMode"> </ng-template> -->
+<div
+  #test
+  *ngIf="!selectMode"
+  (click)="selectMode = !selectMode"
+  class="customer-selector"
+>
+  <button mat-raised-button class="la">+</button>
 </div>
+<div *ngIf="selectMode">
+  <div class="customer-selector__body">
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </div>
+</div>
+<!-- selectMode => {{ selectMode }}<br /> -->
+<!-- text => {{ text }} -->

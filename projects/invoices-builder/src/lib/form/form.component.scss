@@ -5,30 +5,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
 
     div {
-      ::ng-deep lib-customer-selector {
-        flex: 1 1 10%;
-        background-color: white;
-      }
-
       &.card-block {
         flex: 1 1 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 24px;
-        grid-row-gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
       }
 
       .input-block {
-        // display: flex;
-        // flex-wrap: wrap;
-        // flex: 1 1 50%;
-
-        // &__title,
-        // &__input {
-        //   flex: 1 1 100%;
-        // }
+        flex: 1 1 48%;
       }
     }
   }
