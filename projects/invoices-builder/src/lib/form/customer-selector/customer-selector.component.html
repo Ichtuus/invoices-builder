@@ -9,7 +9,7 @@
 </div>
 <div *ngIf="selectMode">
   <div class="customer-selector__body">
-    <mat-select>
+    <mat-select (selectionChange)="onChange($event.value)">
       <mat-option *ngFor="let food of foods" [value]="food.value">
         {{ food.viewValue }}
       </mat-option>
