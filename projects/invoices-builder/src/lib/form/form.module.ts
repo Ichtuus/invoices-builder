@@ -8,7 +8,7 @@ import { BaseModule } from '../base/base.module';
 
 @NgModule({
   declarations: [FormComponent, CustomerSelectorComponent],
-  imports: [CommonModule, TemplateGeneratorModule, BaseModule, SharedModule],
+  imports: [CommonModule, TemplateGeneratorModule, BaseModule, SharedModule, HttpClientModule],
   exports: [FormComponent, CustomerSelectorComponent],
 })
 export class FormModule {}
